@@ -1,0 +1,39 @@
+<% for(var i=0; i < missions.length; i++) { %>
+    <tr>
+        <td>
+            <%= i + 1 %>
+        </td>
+        <td>
+            <%= missions[i].titre %>
+        </td>
+        <td>
+            <%= missions[i].description %>
+        </td>
+        <td>
+            <%= missions[i].montant %>
+        </td>
+        <td>
+            <%= missions[i].date_debut %>
+        </td>
+        <td>
+            <%= missions[i].date_fin %>
+        </td>
+        <td>
+            <%= missions[i].metier %>
+        </td>
+        <td>
+            <%= missions[i].statut %>
+        </td>
+        <td>
+            <%= missions[i].competence %>
+        </td>
+        <td>
+            <a href="/update-mission?id=<%= missions[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+            </a>
+            <a class="btn border-shadow delete" data-id=<%=missions[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>
